@@ -54,6 +54,30 @@ html {
 	font-family: 'Roboto',Arial,Helvetica,sans-serif;
 }
 
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.sticky + .main-content {
+	padding-top: 200px;
+}
+
+#topbar{
+	background-color: #313131;
+	color: gray;
+	padding: 10px 20px;
+	display: flex;
+}
+
+#topbar p {
+	font-size: 1.6rem;
+	margin-right: 15px;
+	font-style: italic;
+}
+
+
 .container {
 	font-size: 2rem;
 }
@@ -62,7 +86,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #000000;
+	background-color: #1a1a1a;
 	color: #ffffff;
 	padding: 15px;
 }
@@ -70,27 +94,41 @@ header {
 header ul {
 	display: flex;
 	align-items: center;
+	justify-content: space-evenly;
+	width:700px;
 }
 
 header ul li a {
 	text-decoration: none;
 	color: white;
-	padding: 50px;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	font-weight: 700;
+	padding: 2px;
 }
 
-.header-icons {
-	display: flex;
+header ul li:hover {
+	opacity: .5;
+	border-bottom: 1px solid gray;
+}
+
+#search {
+	border: 1px solid gray;
+	color: white;
+	width:200px;
+}
+
+#search p {
+	font-size:1.5rem;
+	font-style: italic;
+	padding:10px;
 }
 
 h1 {
 	font-size: 4rem;
+	color: white;
+	font-weight: bold;
 }
 
-/* h1,h2,h3,h4 {
-	margin: 20px 0;
-} */
 
 .text {
 	color: black;
@@ -104,6 +142,7 @@ h1 {
 
 .text p {
 	padding: 5px;
+	color: white;
 }
 
 .row {
@@ -113,33 +152,63 @@ h1 {
 	padding-bottom: 15px;
 }
 
+.row p {
+	color: white;
+	font-size:2.5rem;
+	font-weight: bold;
+	margin: 15px 0px 15px 0px;
+}
+
 .button {
 	color: black;
 	background-color: white;
 	text-decoration: none;
-	padding: 15px;
+	padding: 10px 15px;
 	font-size: 1.5rem;
+	font-weight: bold;
+	margin-right: 10px;
 }
 
-.first-section {
-	height: 600px;
-	background-image: url("../images/man-standing-near-shore-1208777.jpg");
+.button:hover {
+	background-color: lightgray;
+}
+
+
+.first {
+	background-image: url("../images/beau-runsten-mR-N67XjTHg-unsplash.jpg");
+	background-position: center -550px;
+}
+
+.section {
+	height: 450px;
 	background-repeat: no-repeat;
 	background-size: cover;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+}
+.btns {
+	display: flex;
 }
 
-.second-section {
-	height: 400px;
+.second {
 	background-image: url("../images/person-riding-bike-making-trek-on-thin-air-71104.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
-.third-section {
-	height: 500px;
+.third {
+	display:flex;
+	align-items: flex-start;
+	padding-left: 70px;
 	background-image: url("../images/biker-holding-mountain-bike-on-top-of-mountain-with-green-161172.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+}
+
+.fourth {
+	background-image: url("../images/man-standing-near-shore-1208777.jpg")
+}
+
+.third>div>h1 {
+	margin-bottom: 15px;
 }
 
 .sign-up {
@@ -149,7 +218,7 @@ h1 {
 	text-align: center;
 }
 
-.sign-up div {
+.sign-up>div {
 	max-width: 38%;
 	margin: 0 auto;
 	display: flex;
@@ -166,8 +235,20 @@ h1 {
 }
 
 .sub-p {
-	font-size: 1.8rem;
+	font-size: 2rem;
 	line-height: 1.2;
+}
+
+.email {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid gray;
+}
+
+.email p {
+	font-size:1.5rem;
 }
 
 .privacy-policy {

@@ -4,40 +4,74 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>HTML5 boilerplate – all you really need…</title>
+	<title>Road Warriors</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
 
-	<div class="container">
+	<div class="container header" id="myHeader">
+		<div id="topbar">
+			<p>TREK</p>
+			<p>Electra</p>
+			<p>BONTRAGER</p>
+		</div>
 		<header>
 			<h1>Road Warriors</h1>
 			<ul>
 				<li><a href="blank">BIKES</a></li>
+				<li><a href="blank">ELETRIC BIKES</a></li>
 				<li><a href="blank">EQUIPMENT</a></li>
 				<li><a href="blank">APPAREL</a></li>
 				<li><a href="blank">CLEARANCE</a></li>
+				<li><a href="blank">BIKE SHOPS</a></li>
 			</ul>
 			<div class="header-icons">
-				<p>ico</p>
-				<p>ico</p>
-				<p>ico</p>
+				<div id="search">
+					<p>Search</p>
+				</div>
 			</div>
 		</header>
+	</div>
 		<section class="main-content">
-			<div class="first-section text">
+			<div class="first section">
 				<div class="row">
-					<p>Ride bikes.</p>
-					<p>Have fun.</p>
-					<p>Feel good.</p>
+					<h1>Crazy Light, crazy fast</h1>
+					<p>The all-new Émonda</p>
 				</div>
-				<a  class="button" href="blank"><btn>FIND A BIKE</btn></a>
+				<div class="btns">
+					<a class="button" href="blank">SEE THE BIKES</a>
+					<a class="button" href="blank">LEARN MORE</a>
+				</div>
+				
+
 			</div>
 		
-			<div class="second-section text"></div>
-			<div class="third-section text"></div>
+			<div class="second section text">
+				<div class="row">
+					<h1>#GoByBike</h1>
+					<p>There has never been a better time.</p>
+				</div>
+				<a class="button" href="blank">LEARN MORE</a>
+			</div>
+
+			<div class="third section text">
+				<div>
+					<h1>New WaveCel helmets for road, trail, and kids.</h1>
+					<div class="btns">
+						<a class="button" href="blank">SHOP WAVECEL</a>
+						<a class="button" href="">HOW WAVECEL WORKS</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="fourth section text">
+				<div class="row">
+					<h1>Make more possible</h1>
+				</div>
+				<a class="button" href="blank">ELECTRIC BIKES</a>
+			</div>
 
 		</section>
 		<section class="sign-up">
@@ -45,7 +79,8 @@
 				<h1>SIGN ME UP!</h1>
 				<p class="sub-p">Get special offers, exclusive product news, and event info to your inbox.</p>
 				<div class="email">
-					<a class="button" href="blank"><btn>Join</btn></a>
+					<p>Email</p>
+					<a class="button" style="margin-right: 0px;" href="blank">Join</a>
 				</div>
 				<p class="privacy-policy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
 					et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -100,6 +135,19 @@
 			</div>
 		</footer>
 	</div>
-</body>
+	<script>
+window.onscroll = function() {myFunction()};
 
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+	</script>
+</body>
 </html>
