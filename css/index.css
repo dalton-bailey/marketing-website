@@ -64,19 +64,49 @@ html {
 	padding-top: 200px;
 }
 
-#topbar{
+#topbar {
 	background-color: #313131;
-	color: gray;
-	padding: 10px 20px;
 	display: flex;
+	justify-content: space-between;
 }
 
-#topbar p {
+.flag {
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+}
+
+.brands{
+	padding: 10px 0px;
+	display: flex;
+	margin-left: 15px;
+}
+
+.brands p {
 	font-size: 1.6rem;
 	margin-right: 15px;
 	font-style: italic;
+	color: gray;
+
 }
 
+.brands p:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.icons {
+	color: white;
+}
+
+.icons div {
+	margin-right: 15px;
+}
+
+.icons div:hover {
+	cursor: pointer;
+}
 
 .container {
 	font-size: 2rem;
@@ -88,7 +118,11 @@ header {
 	align-items: center;
 	background-color: #1a1a1a;
 	color: #ffffff;
-	padding: 15px;
+	padding: 10px;
+}
+
+.logo {
+	font-style: italic;
 }
 
 header ul {
@@ -112,9 +146,12 @@ header ul li:hover {
 }
 
 #search {
+	display: flex;
+	align-items: center;
 	border: 1px solid gray;
 	color: white;
-	width:200px;
+	width: 250px;
+	padding-left: 5px;
 }
 
 #search p {
@@ -124,7 +161,7 @@ header ul li:hover {
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 	color: white;
 	font-weight: bold;
 }
@@ -214,18 +251,16 @@ h1 {
 .sign-up {
 	background-color: #333333;
 	color: grey;
-	/* padding: 10px; */
 	text-align: center;
 }
 
 .sign-up>div {
-	max-width: 38%;
+	max-width: 30%;
 	margin: 0 auto;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	align-content: space-around;
-	padding: 20px;
+	flex-direction: column; 
+	justify-content: space-evenly; 
+	height: 500px;
 }
 
 .sign-up h1 {
@@ -249,6 +284,7 @@ h1 {
 
 .email p {
 	font-size:1.5rem;
+	padding: 5px;
 }
 
 .privacy-policy {
@@ -257,30 +293,47 @@ h1 {
 	text-align: center;
 }
 
-footer {
+.social-media {
 	display: flex;
-	justify-content: space-around;
-	background-color: #333333;
+	justify-content: space-evenly;
 }
 
-footer h2 {
+.social-media i {
+	font-size: 32px;
+}
+
+footer {
+	background-color: #333333;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-menu {
+	width: 75%;
+	border-top: 1px solid gray;
+	display: flex;
+	justify-content: space-around;
+}
+
+
+.footer-menu h2 {
 	color: #ffffff;
 	font-weight: 700;
 	font-size: 1.4rem;
 	padding: 30px 0 10px 0;
 }
 
-footer ul {
+.footer-menu ul {
 	padding-bottom: 25px;
 }
 
-footer ul li {
+.footer-menu ul li {
 	font-size: 1.3rem;
 	font-style: italic;
 	line-height: 1.8;
 }
 
-footer ul li a {
+.footer-menu ul li a {
 	text-decoration: none;
 	color: grey;
 }
