@@ -24,20 +24,24 @@
 				<div><i class="fas fa-shopping-cart"></i></div>	
 			</div>
 		</div>
-		<header>
-			<h1 class="logo">Road Warriors</h1>
-				<div class="menu" id="myTopnav">
-					<a href="">BIKES</a>
-					<a href="">ELETRIC BIKES</a>
-					<a href="">EQUIPMENT</a>
-					<a href="">APPAREL</a>
-					<a href="">CLEARANCE</a>
-					<a href="">BIKE SHOPS</a>
-					<a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
-						<i class="fa fa-bars"></i>
-					  </a>
+		<div class="mainNav">
+			<div class="mobileFormat">
+				<div onclick="mobileNav()">
+				<a class="icon"><i class="fa fa-bars"></i></a>
 				</div>
-		
+			<h1 class="logo">TREK</h1>
+		</div>
+			
+		<nav class="topnav" id="myTopnav">
+			<ul class="nav">
+				<li><a href="#">BIKES</a></li>
+				<li><a href="#">ELETRIC BIKES</a></li>
+				<li><a href="#">EQUIPMENT</a></li>
+				<li><a href="#">APPAREL</a></li>
+				<li><a href="#">CLEARANCE</a></li>
+				<li><a href="#">BIKE SHOPS</a></li>
+			</ul>
+		</nav>
 			
 			<div class="header-icons">
 				<div id="search">
@@ -45,7 +49,10 @@
 					<p>Search</p>
 				</div>
 			</div>
-		</header>
+			
+		
+	</div>
+		
 	</div>
 		<section class="main-content">
 			<div class="first section">
@@ -178,12 +185,12 @@
 		</footer>
 	</div>
 	<script>
-		function mobileMenu() {
-		  var x = document.getElementById("myTopnav");
-		  if (x.className === "menu") {
-			x.className += " responsive";
+		function mobileNav() {
+		  var nav = document.getElementById("myTopnav");
+		  if (nav.className === "topnav") {
+			nav.className += " responsive";
 		  } else {
-			x.className = "menu";
+			nav.className = "topnav";
 		  }
 		}
 		</script>

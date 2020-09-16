@@ -112,12 +112,15 @@ html {
 	font-size: 2rem;
 }
 
-header {
+.topnav {
+	overflow: hidden;
+}
+
+.mainNav {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: center;	
 	background-color: #1a1a1a;
-	color: #ffffff;
 	padding: 10px;
 }
 
@@ -125,14 +128,14 @@ header {
 	font-style: italic;
 }
 
-.menu {
+.nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-evenly;
 	width:700px;
 }
 
-.menu a {
+.nav a {
 	text-decoration: none;
 	color: white;
 	font-size: 1.3rem;
@@ -140,21 +143,27 @@ header {
 	padding: 2px;
 }
 
-.menu a:hover{
+.nav a:hover{
 	opacity: .5;
 	border-bottom: 1px solid gray;
 }
 
-
-.menu {
-	overflow: hidden;
-  }
-  
-  
-.menu .icon {
+.icon {
 	display: none;
-  }
+}
 
+.mobileNav {
+	display: none;
+}
+  
+.mobileNav a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.3rem;
+	font-weight: 700;
+	padding: 2px;
+	width: 100%;
+}
 
 #search {
 	display: flex;
@@ -269,7 +278,7 @@ h1 {
 }
 
 .sign-up-div {
-	max-width: 30%;
+	width: 30%;
 	margin: 25px 0px;
 }
 
@@ -306,13 +315,13 @@ h1 {
 }
 
 .social-media {
+	width: 20%;
 	display: flex;
 	justify-content: space-evenly;
 	margin: 25px 0px;
 }
 
 .social-media i {
-	width: 20%;
 	font-size: 32px;
 }
 
@@ -357,36 +366,75 @@ footer {
 		display: none;
 	}
 
-	#search {
+	.header-icons {
 		display: none;
 	}
 
+	.icon {
+		display: block;
+		color: white;
+	} 
 
-	.header {
-		justify-content: center;
+	.nav li a {
+		color: white;
+		font-size: 1.5rem;
+	}
+
+	.nav li {
+		border-top: 1px solid gray;
+		padding: 20px;
+	}
+
+	.topnav .nav {
+		display: none;
+	}
+	
+	.topnav.responsive {
+		position: relative;
+	}
+
+	.topnav.responsive .nav {
+		display: block;
+	}
+
+	.mainNav {
+		display: block;
+		padding: 0px;
+	}
+	.mobileFormat {
+	display: flex;
+    align-items: center;
+	width: 100%;
+	padding: 15px;
+	}
+
+	.logo {
+		width: 100%;
+		text-align: center;
+	}
+	.sign-up-div {
+		width: 90%;
+	}
+	.social-media {
+		width: 80%;
+	}
+
+	.footer-menu div ul{
+		display: none;
+	}
+
+	.footer-menu {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.footer-menu div {
+		border-bottom: 1px solid gray;
+	}
+
+	.footer-menu h2 {
+		padding: 30px 10px;
 	}
 
   } 
-
-  @media screen and (max-width: 500px) {
-	.menu a.icon {
-	  float: left;
-	  display: block;
-	}
-  }
-  
-  @media screen and (max-width: 500px) {
-	.menu.responsive {
-		display: flex;
-		flex-direction: column;
-	}
-	.menu.responsive .icon {
-	  position: absolute;
-	  left: 0;
-	}
-	.menu.responsive a {
-	  float: none;
-	  display: block;
-	  text-align: left;
-	}
-  }
